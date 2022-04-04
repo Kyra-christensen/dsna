@@ -26,3 +26,21 @@ function at(arr, index) {
 }
 
 console.log(at(['a', 'b', 'c', 'd', 'e'], 1));
+console.log(at(['a', 'b', 'c', 'd', 'e'], -2));
+
+//anagrams
+function anagrams(wordOne, wordTwo) {
+  const stringOne = wordOne.split('').sort().join('');
+  const stringTwo = wordTwo.split('').sort().join('');
+
+  if (stringOne === stringTwo) {
+    return 'true';
+  } else {
+    return 'false';
+  }
+}
+
+console.log(anagrams('superintended', 'unpredestined'));
+console.log(anagrams('pictorialness', 'documentarily'));
+//unique-char
+
