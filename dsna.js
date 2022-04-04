@@ -11,5 +11,18 @@ function titleCase(input) {
 console.log(titleCase('alchemy ROCKS goLD'));
 
 
-// anagrams
+// at
 
+function at(arr, index) {
+  const arrPositive = arr[index];
+  const arrReversed = arr.reverse();
+  const arrNegative = arrReversed[-index - 1];
+
+  if (index >= 0) {
+    return arrPositive;
+  } else {
+    return arrNegative;
+  }
+}
+
+console.log(at(['a', 'b', 'c', 'd', 'e'], 1));
